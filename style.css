@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  background: radial-gradient(circle at center, #0a001a 20%, #000 100%);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #5c00ff;
+  box-shadow: 0 0 20px #7a00ff88;
+  z-index: 1;
+}
+
+.top-bar h1 {
+  color: #d3adff;
+  text-shadow: 0 0 10px #9f00ff;
+}
+
+.controls button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid #7a00ff;
+  color: #e0b3ff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #7a00ff88;
+}
+
+.controls button:hover {
+  background: #7a00ff;
+  color: #fff;
+  box-shadow: 0 0 15px #a700ff;
+}
+
+.editor-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+textarea#markdown {
+  width: 50%;
+  padding: 20px;
+  background: rgba(20, 20, 20, 0.8);
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  resize: none;
+  border-right: 1px solid #6600cc;
+}
+
+#preview {
+  width: 50%;
+  padding: 20px;
+  background: rgba(30, 0, 60, 0.8);
+  color: #e0e0ff;
+  overflow-y: auto;
+}
+
+#preview h1, h2, h3 {
+  color: #d3adff;
+}
+
+#preview code {
+  background: #2d004d;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #ffebff;
+}
+
+.macos-buttons {
+  display: flex;
+  gap: 8px;
+  margin-right: auto;
+}
+
+.macos-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: red;
+}
+
+.macos-button:nth-child(2) { background: yellow; }
+.macos-button:nth-child(3) { background: green; }
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+  padding: 16px 10px;
+  background: radial-gradient(circle at top, #0a001a 20%, #000 100%);
+  border-top: 1px solid #5c00ff;
+  box-shadow: 0 -2px 15px #7a00ff55;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  }
