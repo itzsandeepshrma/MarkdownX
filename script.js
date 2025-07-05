@@ -18,29 +18,6 @@ function renderMarkdown() {
   preview.innerHTML = html;
 }
 
-function exportMarkdown() {
-  const blob = new Blob([textarea.value], { type: 'text/markdown' });
-  download(blob, 'markdownx.md');
-}
-
-function exportHTML() {
-  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>MarkdownX Export</title></head><body>${converter.makeHtml(textarea.value)}</body></html>`;
-  const blob = new Blob([html], { type: 'text/html' });
-  download(blob, 'markdownx.html');
-}
-
-function download(blob, filename) {
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = filename;
-  link.click();
-  URL.revokeObjectURL(link.href);
-}
-
-function toggleTheme() {
-  document.body.classList.toggle('dark');
-}
-
 // particles.js config
 particlesJS("particles-js", {
   particles: {
