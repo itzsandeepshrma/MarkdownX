@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +39,7 @@ body {
   position: relative;
 }
 
+/* ✅ Center the MarkdownX title */
 .title-center {
   position: absolute;
   left: 50%;
@@ -47,6 +50,24 @@ body {
   pointer-events: none;
 }
 
+.controls button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid #7a00ff;
+  color: #e0b3ff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #7a00ff88;
+}
+
+.controls button:hover {
+  background: #7a00ff;
+  color: #fff;
+  box-shadow: 0 0 15px #a700ff;
+}
+
 .editor-container {
   display: flex;
   flex: 1;
@@ -55,7 +76,7 @@ body {
   min-height: 0;
 }
 
-/* Mobile responsive stacking */
+/* 🔄 Mobile responsive layout */
 @media (max-width: 768px) {
   .editor-container {
     flex-direction: column;
@@ -65,6 +86,16 @@ body {
   #preview {
     width: 100%;
     height: 50vh;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .controls {
+    margin-top: 5px;
   }
 }
 
